@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 from django.contrib.messages import constants as messages
-
+import dj_database_url
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +27,8 @@ SECRET_KEY = 'django-insecure-f1d#$qg_fwz-d@hdyzz%k%nc*=29_5huq9tfo_xmhtx%&so_by
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
 
 
 # Application definition
@@ -76,10 +78,9 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(
+        "postgresql://portfolio_db_xpkg_user:UGZznG4qOFym3PaXrGGjAVaf6PtcGOZl@dpg-d4c990ili9vc73bs8bb0-a.singapore-postgres.render.com/portfolio_db_xpkg"
+    )
 }
 
 
@@ -128,3 +129,4 @@ STATICFILES_DIRS = [
                     BASE_DIR / "static",
                     
                     ]
+STATIC_ROOT = BASE_DIR / "staticfiles"
