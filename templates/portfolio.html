@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - DevFolio Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon" >
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+    {%  include "header.html" %}
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Projects</h2>
+          <p>Adding More Projects...</p>
+        </div><!-- End Section Title -->
+  
+        <div class="container">
+  
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+  
+            <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+              <li data-filter="*" class="filter-active">Website</li>
+              <!--<li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-product">Product</li>
+              <li data-filter=".filter-branding">Branding</li>
+              <li data-filter=".filter-books">Books</li>-->
+            </ul><!-- End Portfolio Filters -->
+  
+            <div class="row gy-4 isotope-container justify-content-center" data-aos="fade-up" data-aos-delay="200">
+  
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                <img src="{% static 'assets/img/portfolio/ap-1.PNG' %}"  class="img-fluid"  alt="">
+                <div class="portfolio-info">
+                  <h4>Website 1</h4>
+                  <p>Portfolio Website Using Django</p>
+                  <a href="{% static 'assets/img/portfolio/ap-1.PNG' %}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url 'home' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div><!-- End Portfolio Item -->
+  
+              <!-- End Portfolio Container -->
+  
+          </div>
+  
+        </div>
+  
+      </section><!-- /Portfolio Section -->
+  
+      <!-- Pricing Section -->
+      <section id="pricing" class="pricing section">
+  
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Pricing</h2>
+          <p>The cost of a Django simple website vs. a WordPress website depends on various factors like hosting, development effort, customization, and maintenance.</p>
+        </div><!-- End Section Title -->
+  
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+  
+          <div class="row gy-4 gx-lg-5">
+  
+            <div class="col-lg-6">
+              <div class="pricing-item d-flex justify-content-between">
+                <h3>Django Simple Website Cost</h3>
+                <h4>$160.00</h4>
+              </div>
+            </div><!-- End Pricing Item -->
+  
+            <div class="col-lg-6">
+              <div class="pricing-item d-flex justify-content-between">
+                <h3> WordPress Website Cost</h3>
+                <h4>$100.00</h4>
+              </div>
+            </div><!-- End Pricing Item -->
+  
+            
+  
+          </div>
+  
+        </div>
+  
+      </section><!-- /Pricing Section -->
+  
+      <!-- Faq Section -->
+      <section id="faq" class="faq section">
+  
+        <div class="container">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="content px-xl-5 ">
+                <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+                
+              </div>
+            </div>
+  
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+  
+              <div class="faq-container">
+                <div class="faq-item faq-active">
+                  <h3><span class="num">1.</span> <span>What services do you offer?</span></h3>
+                  <div class="faq-content">
+                    <p>Front-end Development 
+                      Back-end Development 
+                      Full-Stack Development 
+                      Responsive Web Design
+                      E-commerce Development
+                      SEO Optimization.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+  
+                <div class="faq-item">
+                  <h3><span class="num">2.</span> <span>Can you build a custom website for my business?</span></h3>
+                  <div class="faq-content">
+                    <p>Yes! I can create a fully customized website based on your business needs, whether it’s a landing page, portfolio, or e-commerce store.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+  
+                <div class="faq-item">
+                  <h3><span class="num">3.</span> <span>How long does it take to complete a project?</span></h3>
+                  <div class="faq-content">
+                    <p>Simple website: 1-2 weeks
+                      Business website: 3-4 weeks
+                      E-commerce platform: 4-6 weeks
+                      Web applications: 2+ months</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+  
+                <div class="faq-item">
+                  <h3><span class="num">4.</span> <span> Do you offer website maintenance and support?</span></h3>
+                  <div class="faq-content">
+                    <p>Yes, I offer ongoing maintenance, updates, and support to keep your website running smoothly..</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+  
+                <div class="faq-item">
+                  <h3><span class="num">5.</span> <span>Can you optimize my website for search engines (SEO)?</span></h3>
+                  <div class="faq-content">
+                    <p>Absolutely! I ensure websites are SEO-friendly by optimizing speed, content structure, and meta tags to rank higher on search engines.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+  
+              </div>
+  
+            </div>
+          </div>
+  
+        </div>
+  
+      </section><!-- /Faq Section -->
+  
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials section accent-background">
+  
+        <img src="{% static 'assets/img/testimonials-bg.jpg' %}" class="testimonials-bg" alt="">
+  
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+  
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                }
+              }
+            </script>
+            <div class="swiper-wrapper">
+  
+            
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Gauri Pawar</h3>
+                  <h4>Designer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Their web development expertise helped me launch my portfolio site in no time. It’s mobile-friendly and SEO-optimized!".</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div><!-- End testimonial item -->
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}"  class="testimonial-img" alt="">
+                  <h3>Naina S.</h3>
+                  <h4>Store Owner</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>"Our online store now runs smoothly with secure payment integration. Sales have increased significantly!".</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div><!-- End testimonial item -->
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}"  class="testimonial-img" alt="">
+                  <h3>Abhishek D.</h3>
+                  <h4>Freelancer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>We needed a scalable web application, and the developers delivered beyond expectations. Highly recommended!".</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div><!-- End testimonial item -->
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}"  class="testimonial-img" alt="">
+                  <h3>Ravindra T</h3>
+                  <h4>Entrepreneur</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Thanks to the amazing web development team, my business website is now professional and fast. Customers love the user experience!".</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div><!-- End testimonial item -->
+  
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+  
+        </div>
+  
+      </section><!-- /Testimonials Section -->
+      {% include 'footer.html' %}  
+    </body>
+    </html>
+       
