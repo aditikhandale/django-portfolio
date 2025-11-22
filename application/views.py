@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import requests  
 from django.contrib import messages
-GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbzxaF58gnSqL1zPikaEdAB90liwcdi70GlSji12jRKexvS3bRByIrkzFwQarBxfQ_Bq/exec"
+GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyUfBUpM-dEd3t893KC3K3DL6MR3eO1wyBimo730vtT0waZohmEcnIDGSrqekPzD0AC/exec"
 # Create your views here.
 def home(request):
    
