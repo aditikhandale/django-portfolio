@@ -150,28 +150,29 @@
   <script src="{% static 'assets/js/main.js' %}"></script>
     
 
-  <script>
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault(); // Form submit होऊन page reload होऊ नये
+ <script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    // script URL
-    const scriptURL = "https://script.google.com/macros/s/AKfycbyGdr0l4tcZMeythpVdy6BseYdOgwJGOf0Ky9BGURUllHlxM8FCwsPS9mxsOstZQIB2/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyk6q1kW8EFDPOu7C62mlXy6c_NOjQlcTQ0l-DICjxJK1pr7h_b49o3YQNRagAC0dad/exec";
 
-    // form data घेणे
     const formData = new FormData(this);
 
-    // AJAX request
-    fetch(scriptURL, { method: "POST", body: formData })
-        .then(response => {
-            alert("Message sent successfully!");
-            document.getElementById("contact-form").reset(); // Form clear
-        })
-        .catch(error => {
-            alert("Error! Please try again.");
-            console.error("Error!", error);
-        });
+    fetch(scriptURL, { 
+        method: "POST", 
+        body: formData 
+    })
+    .then(response => {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+    })
+    .catch(error => {
+        alert("Error! Please try again.");
+        console.error("Error!", error);
+    });
 });
 </script>
+
 
     </body>
     </html>
