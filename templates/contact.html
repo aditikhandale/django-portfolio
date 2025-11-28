@@ -88,10 +88,12 @@
   
             </div>
           </div>
-        
-        <div id="successMsg" style="display:none; color:green; margin-bottom:10px;">
-    Message sent successfully!
-   </div>  
+        <div id="popupSuccess" class="popup-overlay" style="display:none;">
+  <div class="popup-box">
+      <h3>Message Sent Successfully!</h3>
+      <button id="closePopup">OK</button>
+  </div>
+</div> 
                  
         <form id="contact-form" class="php-email-form" method="POST">
             
@@ -153,7 +155,10 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
 
     fetch(scriptURL, { method: "POST", body: formData })
         .then(response => {
-            document.getElementById("successMsg").style.display = "block";
+
+            // show popup
+            document.getElementById("popupSuccess").style.display = "flex";
+
             this.reset();
         })
         .catch(error => {
@@ -161,6 +166,12 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
             console.error("Error!", error);
         });
 });
+
+// close button
+document.getElementById("closePopup").addEventListener("click", function() {
+    document.getElementById("popupSuccess").style.display = "none";
+});
+
 </script>
 
 
