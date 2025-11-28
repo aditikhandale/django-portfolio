@@ -89,17 +89,11 @@
             </div>
           </div>
         
-          
+        <div id="successMsg" style="display:none; color:green; margin-bottom:10px;">
+    Message sent successfully!
+   </div>  
                  
-        <form id="contact-form" method="POST">
-
-
-
-
-
-
-
-            
+        <form id="contact-form" class="php-email-form" method="POST">
             
             <div class="row gy-4">
                 <div class="col-md-6">
@@ -124,7 +118,7 @@
                             <div class="alert alert-{{ message.tags }}">{{ message }}</div>
                         {% endfor %}
                     {% endif %}
-                    <button type="submit">Send Message</button>
+                    <button type="submit" class="php-email-form" >Send Message</button>
                 </div>
             </div>
         </form>
@@ -150,28 +144,25 @@
   <script src="{% static 'assets/js/main.js' %}"></script>
     
 
- <script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
     const scriptURL = "https://script.google.com/macros/s/AKfycbyk6q1kW8EFDPOu7C62mlXy6c_NOjQlcTQ0l-DICjxJK1pr7h_b49o3YQNRagAC0dad/exec";
-
     const formData = new FormData(this);
 
-    fetch(scriptURL, { 
-        method: "POST", 
-        body: formData 
-    })
-    .then(response => {
-        alert("Message sent successfully!");
-        document.getElementById("contactForm").reset();
-    })
-    .catch(error => {
-        alert("Error! Please try again.");
-        console.error("Error!", error);
-    });
+    fetch(scriptURL, { method: "POST", body: formData })
+        .then(response => {
+            document.getElementById("successMsg").style.display = "block";
+            this.reset();
+        })
+        .catch(error => {
+            alert("Error! Please try again.");
+            console.error("Error!", error);
+        });
 });
 </script>
+
 
 
     </body>
