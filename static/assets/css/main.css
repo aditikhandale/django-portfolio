@@ -1442,6 +1442,10 @@ section,
   from { transform: scale(0.7); }
   to { transform: scale(1); }
 }
+button[type="submit"]:hover {
+  background: #ff6b6b !important;   /* थोडा dark / visible */
+  color: white !important;
+}
 
 
 /*--------------------------------------------------------------

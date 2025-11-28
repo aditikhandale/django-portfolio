@@ -153,14 +153,14 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     const scriptURL = "https://script.google.com/macros/s/AKfycbyk6q1kW8EFDPOu7C62mlXy6c_NOjQlcTQ0l-DICjxJK1pr7h_b49o3YQNRagAC0dad/exec";
     const formData = new FormData(this);
 
+    // 👉 Popup लगेच दाखव (Google response ची वाट न पाहता)
+    document.getElementById("popupSuccess").style.display = "flex";
+
+    // 👉 Form reset लगेच (optional)
+    this.reset();
+
+    // Google Script कडे डेटा पाठवत रहा (background मध्ये)
     fetch(scriptURL, { method: "POST", body: formData })
-        .then(response => {
-
-            // show popup
-            document.getElementById("popupSuccess").style.display = "flex";
-
-            this.reset();
-        })
         .catch(error => {
             alert("Error! Please try again.");
             console.error("Error!", error);
@@ -171,6 +171,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
 document.getElementById("closePopup").addEventListener("click", function() {
     document.getElementById("popupSuccess").style.display = "none";
 });
+
 
 </script>
 
